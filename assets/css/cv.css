@@ -1,0 +1,274 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: #edf1f3;
+}
+
+body {
+  margin: 0;
+  color: #111;
+  background: #edf1f3;
+  font-family: Arial, Helvetica, "Liberation Sans", sans-serif;
+  font-size: 10.5pt;
+  line-height: 1.38;
+  overflow-wrap: anywhere;
+}
+
+a {
+  color: #111;
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+}
+
+:focus-visible {
+  outline: 3px solid #145b71;
+  outline-offset: 3px;
+}
+
+.cv-toolbar {
+  display: flex;
+  width: min(100% - 2rem, 210mm);
+  justify-content: flex-end;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+  margin: 1rem auto;
+}
+
+.cv-action {
+  display: inline-flex;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 0.9rem;
+  border: 1px solid #aab7bc;
+  border-radius: 0.45rem;
+  background: #fff;
+  color: #111;
+  font: inherit;
+  font-size: 0.94rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cv-action--primary {
+  border-color: #145b71;
+  background: #145b71;
+  color: #fff;
+}
+
+.cv-sheet {
+  width: min(100% - 2rem, 210mm);
+  margin: 0 auto 2rem;
+  padding: clamp(1.25rem, 4vw, 2rem);
+  border: 1px solid #d4dadd;
+  background: #fff;
+  box-shadow: 0 0.7rem 2rem rgb(20 38 45 / 10%);
+}
+
+.cv-intro {
+  padding-bottom: 0.65rem;
+  border-bottom: 1.5px solid #111;
+}
+
+.cv-intro h1 {
+  margin: 0;
+  font-size: clamp(1.65rem, 5vw, 2rem);
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+}
+
+.cv-headline {
+  margin: 0.35rem 0 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.cv-contact {
+  margin: 0.55rem 0 0;
+  font-size: 0.95rem;
+}
+
+.cv-section {
+  margin-top: 0.78rem;
+}
+
+.cv-section h2 {
+  margin: 0 0 0.25rem;
+  font-size: 1.12rem;
+  line-height: 1.2;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+
+.cv-section p {
+  margin: 0.2rem 0;
+}
+
+.cv-section ul {
+  margin: 0.22rem 0 0.25rem;
+  padding-left: 1.15rem;
+}
+
+.cv-section li {
+  margin: 0.12rem 0;
+}
+
+.cv-entry {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.cv-entry + .cv-entry {
+  margin-top: 0.48rem;
+}
+
+.cv-entry__heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.15rem 0.9rem;
+  flex-wrap: wrap;
+}
+
+.cv-entry__heading h3 {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+.cv-date,
+.cv-project__type {
+  flex: 0 1 auto;
+  font-size: 0.94rem;
+  white-space: normal;
+}
+
+.cv-project__type {
+  font-style: italic;
+}
+
+.cv-tech,
+.cv-repo {
+  font-size: 0.94rem;
+}
+
+.cv-project .cv-tech {
+  margin-top: 0.18rem;
+}
+
+.cv-project .cv-repo {
+  margin-top: 0.1rem;
+}
+
+/* Keeps short hyphenated terms on one line so PDF text extraction does not split them. */
+.nowrap {
+  white-space: nowrap;
+}
+
+@media (max-width: 30rem) {
+  .cv-sheet {
+    width: min(100% - 1rem, 210mm);
+    padding: 1rem;
+  }
+
+  .cv-toolbar {
+    width: min(100% - 1rem, 210mm);
+  }
+}
+
+@page {
+  size: A4;
+  margin: 12mm 15mm;
+}
+
+@media print {
+  html,
+  body {
+    background: #fff;
+  }
+
+  body {
+    font-size: 10pt;
+    line-height: 1.24;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .cv-sheet {
+    width: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-shadow: none;
+  }
+
+  .cv-intro {
+    padding-bottom: 0.45rem;
+  }
+
+  .cv-intro h1 {
+    font-size: 19pt;
+  }
+
+  .cv-headline {
+    margin-top: 0.22rem;
+    font-size: 10.5pt;
+  }
+
+  .cv-contact {
+    margin-top: 0.35rem;
+    font-size: 9.5pt;
+  }
+
+  .cv-section {
+    margin-top: 0.52rem;
+  }
+
+  .cv-section h2 {
+    margin-bottom: 0.15rem;
+    font-size: 11.2pt;
+  }
+
+  .cv-section p {
+    margin-block: 0.12rem;
+  }
+
+  .cv-section ul {
+    margin-block: 0.12rem 0.18rem;
+  }
+
+  .cv-section li {
+    margin-block: 0.05rem;
+  }
+
+  .cv-entry + .cv-entry {
+    margin-top: 0.32rem;
+  }
+
+  .cv-entry__heading h3 {
+    font-size: 10pt;
+  }
+
+  .cv-date,
+  .cv-project__type,
+  .cv-tech,
+  .cv-repo {
+    font-size: 9.5pt;
+  }
+
+  a {
+    color: #111;
+    text-decoration: none;
+  }
+
+  a[href] {
+    overflow-wrap: anywhere;
+  }
+}

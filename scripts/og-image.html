@@ -1,0 +1,53 @@
+<!doctype html>
+<!--
+  Social preview image template (1200 x 630).
+  This page is not part of the website. It is only screenshotted to create
+  assets/img/og-image.png, the picture shown when the site link is shared.
+
+  Render it with:  pwsh -File scripts/build-cv.ps1 -OgImage
+  If the site moves to a different address, update the URL text below.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Social preview template</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { width: 1200px; height: 630px; margin: 0; overflow: hidden; }
+    body {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 96px;
+      background: #f4f7f9;
+      color: #172a33;
+      font-family: "Segoe UI", system-ui, -apple-system, Arial, Helvetica, sans-serif;
+    }
+    .ring {
+      position: absolute;
+      top: -90px;
+      right: -70px;
+      width: 470px;
+      height: 470px;
+      border: 2px solid #cad6da;
+      border-radius: 50%;
+      background: radial-gradient(circle at 38% 38%, #dcebee, rgb(244 247 249 / 0%) 68%);
+    }
+    .eyebrow { margin: 0; color: #145b71; font-size: 24px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+    h1 { position: relative; margin: 18px 0 0; font-size: 148px; font-weight: 700; letter-spacing: -0.07em; line-height: 1; }
+    h1 span { color: #145b71; }
+    .headline { position: relative; margin: 34px 0 0; font-size: 38px; font-weight: 600; letter-spacing: -0.03em; }
+    .url { position: absolute; left: 96px; bottom: 56px; margin: 0; color: #405863; font-size: 26px; font-weight: 600; }
+    .bar { position: absolute; left: 0; bottom: 0; width: 100%; height: 14px; background: #145b71; }
+  </style>
+</head>
+<body>
+  <div class="ring"></div>
+  <p class="eyebrow">Portfolio · Computer Engineering</p>
+  <h1>Oğuz <span>Çetin</span></h1>
+  <p class="headline">Computer Engineering Student | ASP.NET Core &amp; Software Development</p>
+  <p class="url">houzcetin.github.io</p>
+  <div class="bar"></div>
+</body>
+</html>
