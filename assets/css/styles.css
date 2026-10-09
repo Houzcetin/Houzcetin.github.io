@@ -356,19 +356,39 @@ button {
 .hero__inner {
   position: relative;
   z-index: 1;
+  display: grid;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
 }
 
-.hero__accent {
-  position: absolute;
-  z-index: -1;
-  top: 8%;
-  right: max(1rem, calc((100vw - var(--content-width)) / 2));
-  width: clamp(8rem, 24vw, 21rem);
-  aspect-ratio: 1;
+.hero__text {
+  min-width: 0;
+}
+
+/* The photo keeps its own shape (3:4); it is never cropped or stretched. */
+.hero__photo {
+  width: min(100%, 22rem);
+  min-width: 0;
+  margin: 0;
+}
+
+.hero__photo img {
+  display: block;
+  width: 100%;
+  height: auto;
   border: 1px solid var(--border);
-  border-radius: 50%;
-  background: radial-gradient(circle at 38% 38%, var(--accent-soft), transparent 68%);
-  opacity: 0.82;
+  border-radius: calc(var(--radius) + 0.35rem);
+  box-shadow: var(--shadow);
+}
+
+@media (min-width: 56rem) {
+  .hero__inner {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 22rem);
+  }
+
+  .hero__photo {
+    justify-self: end;
+  }
 }
 
 .eyebrow {
@@ -1113,11 +1133,6 @@ button {
     min-height: 0;
   }
 
-  .hero__accent {
-    top: 4%;
-    right: 0.65rem;
-    opacity: 0.55;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

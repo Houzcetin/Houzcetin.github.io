@@ -47,6 +47,7 @@ window.PORTFOLIO_TR = {
   "hero.viewProjects": "Projeleri Gör",
   "hero.viewCv": "CV'yi Görüntüle",
   "hero.downloadCv": "CV'yi İndir",
+  "hero.photoAlt": "Oğuz Çetin, gün batımında nehir üzerindeki taş bir köprüde",
 
   /* About */
   "about.eyebrow": "Kısaca ben",

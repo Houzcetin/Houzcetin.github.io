@@ -73,6 +73,12 @@ Your name, email, GitHub and LinkedIn links appear in four places: the Contact s
 
 The website and the CVs do not update each other. After changing a fact on one, check the others, then rebuild the PDFs.
 
+## Change the profile photo
+
+The photo in the home section is stored twice, as `assets/img/profile.webp` (small, used by modern browsers) and `assets/img/profile.jpg` (fallback). Both are 880 × 1173 pixels and contain no location data.
+
+To replace it, save the new picture under the same two names. If its shape is different, also update the `width` and `height` numbers on the `<img>` in the hero section of `index.html`. Phone photos in HEIC format must be converted first, because browsers cannot show them. Its description for screen readers is the `alt` text in `index.html` (English) and `hero.photoAlt` in `assets/js/tr.js` (Turkish).
+
 ## Add screenshots and videos
 
 Nothing is shown for media that does not exist. A project with no images has no Screenshots block, and a project with no video has no Demo video block. Add the files, list them in `data.js`, and the blocks appear.
