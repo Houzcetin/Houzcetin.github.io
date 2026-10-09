@@ -75,9 +75,9 @@ The website and the CVs do not update each other. After changing a fact on one, 
 
 ## Change the profile photo
 
-The photo in the home section is stored twice, as `assets/img/profile.webp` (small, used by modern browsers) and `assets/img/profile.jpg` (fallback). Both are 880 × 1173 pixels and contain no location data.
+The portrait in the About section is stored twice, as `assets/img/profile.webp` (small, used by modern browsers) and `assets/img/profile.jpg` (fallback). Both are 720 × 900 pixels, cropped around the person, and contain no location data.
 
-To replace it, save the new picture under the same two names. If its shape is different, also update the `width` and `height` numbers on the `<img>` in the hero section of `index.html`. Phone photos in HEIC format must be converted first, because browsers cannot show them. Its description for screen readers is the `alt` text in `index.html` (English) and `hero.photoAlt` in `assets/js/tr.js` (Turkish).
+To replace it, save the new picture under the same two names. If its shape is different, also update the `width` and `height` numbers on the `<img>` in the About section of `index.html`. Phone photos in HEIC format must be converted first, because browsers cannot show them. Its description for screen readers is the `alt` text in `index.html` (English) and `about.photoAlt` in `assets/js/tr.js` (Turkish).
 
 ## Add screenshots and videos
 

@@ -47,12 +47,12 @@ window.PORTFOLIO_TR = {
   "hero.viewProjects": "Projeleri Gör",
   "hero.viewCv": "CV'yi Görüntüle",
   "hero.downloadCv": "CV'yi İndir",
-  "hero.photoAlt": "Oğuz Çetin, gün batımında nehir üzerindeki taş bir köprüde",
 
   /* About */
   "about.eyebrow": "Kısaca ben",
   "about.title1": "Kullanışlı yazılımlar geliştiriyor,",
   "about.title2": "yaparak öğreniyorum.",
+  "about.photoAlt": "Oğuz Çetin'in gün batımında taş bir köprüde çekilmiş portresi",
   "about.lead": "Yaşar Üniversitesi'nde Bilgisayar Mühendisliği öğrencisiyim. ASP.NET Core uygulamaları, REST API'ler, veritabanları, mobil geliştirme ve e-posta otomasyonu alanlarında uygulamalı deneyimim var. İşe yarayan yazılımlar geliştirmeyi ve yapay zekânın faydalı uygulamaları nasıl destekleyebileceğini keşfetmeyi seviyorum. Şu sıralar backend geliştirme, bilgisayarlı görü ve robotik ile ilgileniyorum.",
 
   /* Education */
